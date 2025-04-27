@@ -1,1 +1,2 @@
 # Sweccathon
+AI Music Assistant
