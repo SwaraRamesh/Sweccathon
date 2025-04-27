@@ -1,0 +1,350 @@
+/* static/css/style.css */
+
+:root {
+    --primary-color: #1db954;
+    --secondary-color: #191414;
+    --text-color: #ffffff;
+    --background-color: #121212;
+    --card-background: #282828;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Login Page Styles */
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #1db954, #191414);
+  }
+  
+  .login-container {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .login-container h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .login-box {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-top: 40px;
+    box-shadow: var(--box-shadow);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .spotify-login-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .spotify-login-btn:hover {
+    background-color: #1ed760;
+    transform: translateY(-2px);
+  }
+  
+  .spotify-login-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  
+  /* Dashboard Styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .logout-btn {
+    margin-left: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  section {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  section h2 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+  }
+  
+  /* Activity Monitor Styles */
+  .activity-meter {
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .activity-bar {
+    height: 100%;
+    background: linear-gradient(to right, #1db954, #ffba08, #d00000);
+    width: 0%;
+    transition: width 0.5s ease;
+    border-radius: 10px;
+  }
+  
+  .activity-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .activity-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .activity-stats div {
+    padding: 10px;
+    border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 45%;
+  }
+  
+  .activity-stats h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
+  .activity-stats p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Music Player Styles */
+  .current-track {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .album-art {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin-right: 15px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .track-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .player-controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .control-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .control-btn:hover {
+    background-color: #1ed760;
+  }
+  
+  .volume-control {
+    display: flex;
+    align-items: center;
+  }
+  
+  .volume-control label {
+    margin-right: 10px;
+  }
+  
+  .volume-control input {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  /* Playlist Styles */
+  .mode-selector {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .mode-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .mode-btn.active {
+    background-color: var(--primary-color);
+  }
+  
+  .playlist-list {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .playlist-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .playlist-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .playlist-item.active {
+    background-color: rgba(29, 185, 84, 0.3);
+  }
+  
+  .playlist-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Settings Styles */
+  .setting-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .setting-item label {
+    margin-right: 10px;
+    flex-grow: 1;
+  }
+  
+  .setting-item input[type="range"] {
+    width: 100px;
+  }
+  
+  .setting-item input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .setting-item select {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .user-info {
+      margin-top: 20px;
+    }
+  }
